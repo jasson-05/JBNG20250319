@@ -20,8 +20,10 @@ public partial class User
 
     [StringLength(40, MinimumLength = 5, ErrorMessage = "El passowrd debe tener entre 5 y 50 caracteres.")]
     [Required(ErrorMessage = "La contraseña es obligatorio.")]
+    [DataType(DataType.Password)]
     [Display(Name = "Contraseña")]
     public string PasswordHash { get; set; } = null!;
-
+    
+    [Display(Name = "Rol")]
     public string Role { get; set; } = null!;
 }
